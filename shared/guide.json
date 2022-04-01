@@ -1,0 +1,206 @@
+{
+  "debuff": [
+    {
+      "name": "Weak",
+      "description": "The target deals 20% less attack DMG."
+    },
+    {
+      "name": "Bleed",
+      "description": "Target loses 15 HP when playing a card."
+    },
+    {
+      "name": "Fear",
+      "description": "Whenever this unit uses an Attack card, shuffle a Confused into its draw pile."
+    },
+    {
+      "name": "Death Mark",
+      "description": "Whenever your opponent plays an Attack card, the target takes 13 DMG per Energy spent."
+    },
+    {
+      "name": "Hex",
+      "description": "Whenever the target uses a non-Attack card, shuffle a Confused into its draw pile."
+    },
+    {
+      "name": "Fragile",
+      "description": "This unit gains 20% less Shield from Abilities."
+    },
+    {
+      "name": "Poison",
+      "description": "The target loses 3 HP per stack at the start of its turn. Stacks are reduced by 1. Cap: 30 stacks."
+    },
+    {
+      "name": "Sleep",
+      "description": "The target cannot use Abilities. If it's attacked, remove Sleep."
+    },
+    {
+      "name": "Disarm",
+      "description": "The target cannot use Attack Abilities."
+    },
+    {
+      "name": "Doubt",
+      "description": "The target gains 20% less HP from Healing."
+    },
+    {
+      "name": "Stunned",
+      "description": "Target cannot use any abilities."
+    },
+    {
+      "name": "Vulnerable",
+      "description": "The target receives 20% more attack DMG."
+    },
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "buff": [
+    {
+      "name": "Taunt",
+      "description": "The target is always targeted by enemy attack abilities."
+    },
+    {
+      "name": "Bubble",
+      "description": "Block 5 DMG per stack. Max: 3 stacks. Turn into Bubble Bomb upon reaching 3 stacks"
+    },
+    {
+      "name": "Bubble Bomb",
+      "description": "The next attack explodes Bubble Bomb and deals 20 DMG to all Enemies."
+    },
+    {
+      "name": "Rage",
+      "description": "Plus 2 DMG per Rage stack. Enter Fury Form at 10 Rage stacks."
+    },
+    {
+      "name": "Fury",
+      "description": "Gain 1 Energy when transformed. Deal double damage until end of turn."
+    },
+    {
+      "name": "DMG Boost",
+      "description": "The target has Attack DMG increased by 1 per stack."
+    },
+    {
+      "name": "Healing Boost",
+      "description": "Increase healing card effects to this unit by 1 HP per stack."
+    },
+    {
+      "name": "Cleanser",
+      "description": "Each stack negates 1 debuff applied to the target."
+    },
+    {
+      "name": "Feather",
+      "description": "When Axie does a non-multihit attack, consume all Feather stacks to deal 2 bonus DMG per stack and heal 2 HP per stack. Max : 10 stack."
+    },
+    {
+      "name": "Leaf",
+      "description": "Regen 5 HP at the end of your turn. Max stack: 5"
+    },
+    {
+      "name": "Stealth",
+      "description": "The target cannot be targeted directly. If it uses a card, remove Stealth."
+    },
+    {
+      "name": "Meditate",
+      "description": "Meditate for 2  turns. If attacked while Meditating, awake and gain 3 Rage. If not, Cleanse 1 debuff and gain 1 Energy after effect ends."
+    }
+  ],
+  "curse": [
+    {
+      "name": "Jinx",
+      "description": "Unplayable. Ethereal. At the end of your turn, your furthest Axie takes 15 damage."
+    },
+    {
+      "name": "Daze",
+      "description": "Unplayable"
+    },
+    {
+      "name": "Confused",
+      "description": "Unplayable. Ethereal."
+    },
+    {
+      "name": "Goo",
+      "description": "Banish."
+    },
+    {
+      "name": "Void",
+      "description": "Unplayable. Ethereal. When you draw 1 or more Void, lose 1 Energy."
+    },
+    {
+      "name": "Burn",
+      "description": "Unplayable. Ethereal. At the end of your turn, all allies take 8 damage."
+    },
+    {
+      "name": "Blackmail",
+      "description": "Apply Taunt to your furthest Axie for 2 turns. If this is not used, put it onto the top of your draw pile."
+    }
+  ],
+  "toolcards": [
+    {
+      "name": "Lumbershield",
+      "description": "Retain. Target any ally. Banish. Shield for 12, 0 energy."
+    },
+    {
+      "name": "Strawberry",
+      "description": "Retain. Target any ally. Banish. Heal for 60, 0 energy."
+    },
+    {
+      "name": "Pure Water",
+      "description": "Retain. Target any ally. Banish. Heal for 6, 0 energy."
+    }
+  ],
+  "summon": [
+    {
+      "name": "Clover",
+      "description": "Plant | 35 HP | When your turn starts, randomly grant 1~2 Leafs to your Axies. Clover disappears after 4 leafs are granted."
+    },
+    {
+      "name": "Trunk",
+      "description": "Plant | 75 HP. Taunt"
+    },
+    {
+      "name": "Robin",
+      "description": "Bird | 18 HP | Teammates deal 16 more DMG. Lose 8 HP when your turn ends."
+    },
+    {
+      "name": "Mavis",
+      "description": "Bird | 18 HP | When your turn starts (after card drawing), Mavis reduces 1 Energy of a random Attack card. Lose 8 HP when your turn ends."
+    },
+    {
+      "name": "Mushroom",
+      "description": "Plant | 18 HP | When your turn ends, this Mushroom restores 24 HP to your most injured ally and loses 8 HP."
+    }
+  ],
+  "keywords": [
+    {
+      "name": "Initial",
+      "description": "The first card played in a turn."
+    },
+    {
+      "name": "Banish",
+      "description": "Remove the card from your deck until the end of battle."
+    },
+    {
+      "name": "Scry",
+      "description": "Look at the top cards of your draw pile. You may discard any of them."
+    },
+    {
+      "name": "Innate",
+      "description": "Start each battle with this card in your hand."
+    },
+    {
+      "name": "Clean",
+      "description": "Remove debuffs from target, up to 5 stacks."
+    },
+    {
+      "name": "Dispel",
+      "description": "Remove 1 buff from target, up to 5 stacks"
+    },
+    {
+      "name": "Steal",
+      "description": "Deal pure DMG and gain HP."
+    },
+    {
+      "name": "Retain",
+      "description": "Do not discard this card at the end of your turn"
+    }
+  ]
+}

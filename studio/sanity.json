@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US",
-    "dataset": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US"
+    "projectId": "tac9w5pw",
+    "dataset": "production"
   },
   "project": {
-    "name": "Next.js Comment-enabled blog",
+    "name": "Axie Origin",
     "basePath": "/studio"
   },
   "plugins": [
@@ -13,7 +13,8 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/vision"
   ],
   "env": {
     "development": {
