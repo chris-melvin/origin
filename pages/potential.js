@@ -1,11 +1,8 @@
 import Layout from "../components/layout";
 import Head from "next/head";
 import Navbar from "../components/navbar";
-import guide from "../shared/guide.json";
-import Table from "../components/table";
 
-export default function Guide({ filecontent }) {
-  console.log(filecontent);
+export default function Guide() {
   return (
     <>
       <Layout>
@@ -21,10 +18,3 @@ export default function Guide({ filecontent }) {
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  const filecontent = await guide;
-  return {
-    props: { filecontent },
-  };
-};

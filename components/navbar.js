@@ -14,6 +14,9 @@ export default function Navbar() {
         <Link href="/potential">
           <a className="text-block mx-4">Potential Points</a>
         </Link>
+        <Link href="/about">
+          <a className="text-block mx-4">About</a>
+        </Link>
       </div>
     </nav>
   );

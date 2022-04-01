@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import Script from "next/script";
 
 export default function Meta() {
   return (
@@ -34,6 +35,19 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`Axie Infinity Origin Cards`} />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.NEXT_PUBLIC_GA_TRACKING_ID});
+        `}
+      </Script>
     </Head>
   );
 }
