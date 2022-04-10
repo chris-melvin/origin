@@ -3,6 +3,7 @@ import { getAllCards } from "../lib/api";
 import Head from "next/head";
 import AxieCard from "../components/axie-card";
 import Navbar from "../components/navbar";
+import Search from "../components/search";
 
 export default function Index({ allCards }) {
   return (
@@ -15,10 +16,12 @@ export default function Index({ allCards }) {
         <h1 className="text-2xl text-center my-10">
           Axie Origin Card Explorer
         </h1>
-        <section className="grid sm:grid-cols-autofit gap-2 items-stretch">
-          {allCards.map((card) => (
+        <section>
+          {/* {allCards.map((card) => (
             <AxieCard key={card._id} {...card} />
-          ))}
+          ))} */}
+
+          <Search allCards={allCards} />
         </section>
       </Layout>
     </>
