@@ -1,8 +1,16 @@
 import { imageBuilder } from "../lib/sanity";
 
-export default function CardImage({ title, imageObject, slug, width, height }) {
+export default function CardImage({
+  title,
+  imageObject,
+  slug,
+  width,
+  height,
+  scale,
+}) {
   const image = (
     <img
+      className={` ${scale} transition duration-150 ease-in-out`}
       width={width}
       height={height}
       alt={`Axie Card ${title}`}

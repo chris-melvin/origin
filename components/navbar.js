@@ -4,24 +4,24 @@ import Link from "next/link";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-slate-500 font-bold">
+    <nav className="bg-primary font-bold">
       <div className="flex z-100 p-6 justify-between">
-        <h1 className="text-xl font-mono  ">Origin</h1>
+        <h1 className="text-xl font-mono text-white  ">Origin</h1>
         <div className={`hidden md:block space-x-6`}>
           <Link href="/">
-            <a className="text-black ">Home</a>
+            <a className="text-white ">Home</a>
           </Link>
           <Link href="/tierlist">
-            <a className="text-black ">Tier List</a>
+            <a className="text-white ">Tier List</a>
           </Link>
           <Link href="/guide">
-            <a className="text-block ">Guide</a>
+            <a className="text-white ">Guide</a>
           </Link>
           <Link href="/potential">
-            <a className="text-block ">Potential Points</a>
+            <a className="text-white ">Potential Points</a>
           </Link>
           <Link href="/about">
-            <a className="text-block ">About</a>
+            <a className="text-white ">About</a>
           </Link>
         </div>
         <button
@@ -37,19 +37,19 @@ export default function Navbar() {
       {open && (
         <div className="p-4 flex flex-col space-y-3 md:hidden">
           <Link href="/">
-            <a className="text-black ">Home</a>
+            <a className="text-white ">Home</a>
           </Link>
           <Link href="/tierlist">
-            <a className="text-black ">Tier List</a>
+            <a className="text-white ">Tier List</a>
           </Link>
           <Link href="/guide">
-            <a className="text-block ">Guide</a>
+            <a className="text-white ">Guide</a>
           </Link>
           <Link href="/potential">
-            <a className="text-block ">Potential Points</a>
+            <a className="text-white ">Potential Points</a>
           </Link>
           <Link href="/about">
-            <a className="text-block ">About</a>
+            <a className="text-white ">About</a>
           </Link>
         </div>
       )}
@@ -64,7 +64,7 @@ const MenuAlt4Svg = ({ menuOpen }) => (
       menuOpen ? "transform rotate-90" : ""
     }`}
     viewBox="0 0 20 20"
-    fill="currentColor"
+    fill="white"
   >
     <path
       fillRule="evenodd"

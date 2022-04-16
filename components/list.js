@@ -2,9 +2,10 @@ import { useState } from "react";
 import { useDrop } from "react-dnd";
 import TierCard from "./tiercard";
 import { handleCard } from "./utils";
+import { AiOutlineMinusSquare, AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function List({ tier, list, setList }) {
-  const [fold, setFold] = useState(false);
+  const [fold, setFold] = useState(true);
   const [{ isOver, result }, dropRef] = useDrop({
     accept: "card",
     drop: (item, monitor) => {
@@ -15,12 +16,53 @@ export default function List({ tier, list, setList }) {
     }),
   });
 
+  const tierName = {
+    Stier: {
+      name: "S Tier",
+      color: "#d62828",
+    },
+    Atier: {
+      name: "A Tier",
+      color: "#f77f00",
+    },
+    Btier: {
+      name: "B Tier",
+      color: "#fcbf49",
+    },
+    Ctier: {
+      name: "C Tier",
+      color: "#b5e48c",
+    },
+    Dtier: {
+      name: "D Tier",
+      color: "#ade8f4",
+    },
+    Etier: {
+      name: "E Tier",
+      color: "#cdb4db",
+    },
+    Ftier: {
+      name: "F Tier",
+      color: "#ffc8dd",
+    },
+  };
   return (
-    <div>
-      <h1>{tier}</h1>
-      <button onClick={() => setFold(!fold)}>Toggle Hide</button>
+    <div className="m-2">
+      <span className="flex">
+        <h2
+          className="font-mono text-xl font-bold inline "
+          style={{ color: tierName[tier].color }}
+        >
+          {tierName[tier].name}
+        </h2>
+        <button className="text-xl m-1" onClick={() => setFold(!fold)}>
+          {fold ? <AiOutlinePlusSquare /> : <AiOutlineMinusSquare />}
+        </button>
+      </span>
+
       <div
-        className={`bg-slate-50 flex flex-wrap mb-2 ${fold ? "hidden" : ""} `}
+        style={{ backgroundColor: tierName[tier].color }}
+        className={` flex flex-wrap mb-2 transition  ${fold ? "hidden" : ""} `}
         ref={dropRef}
       >
         <div className="h-40"></div>

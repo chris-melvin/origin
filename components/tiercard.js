@@ -25,12 +25,19 @@ export default function TierCard({
   });
 
   return (
-    <div className="" ref={dragRef} style={{ opacity: isDragging ? 0 : 1 }}>
+    <div
+      className="hover:cursor-grab"
+      ref={dragRef}
+      style={{
+        opacity: isDragging ? 0 : 1,
+      }}
+    >
       <CardImage
         title={title}
         imageObject={mainImage}
         width={100}
         height={200}
+        scale="hover:scale-150"
       />
     </div>
   );

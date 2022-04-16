@@ -17,10 +17,6 @@ export default function Index({ allCards }) {
           Axie Origin Card Explorer
         </h1>
         <section>
-          {/* {allCards.map((card) => (
-            <AxieCard key={card._id} {...card} />
-          ))} */}
-
           <Search allCards={allCards} />
         </section>
       </Layout>
