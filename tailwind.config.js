@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         autofit: "repeat(auto-fit, minmax(200px, 1fr))",
+        list: "repeat(auto-fit, minmax(100px, 1fr))",
       },
     },
   },

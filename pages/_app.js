@@ -2,6 +2,8 @@ import "../styles/index.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 import * as ga from "../lib/google-analytics";
 
@@ -19,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
   return (
-    <>
+    <DndProvider backend={HTML5Backend}>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
         strategy="afterInteractive"
@@ -34,7 +36,7 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <Component {...pageProps} />
-    </>
+    </DndProvider>
   );
 }
 
