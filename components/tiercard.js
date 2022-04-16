@@ -3,7 +3,14 @@ import CardImage from "./card-image";
 import { useDrag } from "react-dnd";
 import { ItemTypes } from "../lib/constants";
 
-export default function TierCard({ title, mainImage, axieClass, part, _id }) {
+export default function TierCard({
+  title,
+  mainImage,
+  axieClass,
+  part,
+  _id,
+  tier,
+}) {
   const [{ isDragging, result }, dragRef] = useDrag({
     type: ItemTypes.CARD,
     item: {
