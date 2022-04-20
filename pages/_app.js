@@ -6,7 +6,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 import * as ga from "../lib/google-analytics";
-import { ThemeProvider } from "../components/themeContext";
+import { ThemeProvider } from "../components/darkThemeContext";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

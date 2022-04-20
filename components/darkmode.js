@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { BsSunFill, BsMoon } from "react-icons/bs";
-import { ThemeContext } from "./themeContext";
+import { ThemeContext } from "./darkThemeContext";
 
 export default function Darkmode() {
   const theme = useContext(ThemeContext);
