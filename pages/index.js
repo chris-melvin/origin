@@ -13,7 +13,7 @@ export default function Index({ allCards }) {
           <title>Axie Origin</title>
         </Head>
         <Navbar />
-        <h1 className="text-2xl text-center my-10">
+        <h1 className="text-2xl text-center my-10 dark:text-white">
           Axie Origin Card Explorer
         </h1>
         <section>

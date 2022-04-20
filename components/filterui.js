@@ -10,14 +10,14 @@ export default function FilterUI({
     <div className="flex flex-col">
       <div className="flex flex-col">
         <input
-          className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          className="bg-gray-200 dark:bg-primary appearance-none border-2 border-gray-200 dark:border-primary rounded w-full py-2 px-4 text-gray-700 dark:text-gray-200 leading-tight focus:outline-none focus:bg-secondary focus:border-lightSecondary"
           type="text"
           placeholder="Search for a Card"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <select
-          className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          className=" bg-gray-200 dark:bg-primary appearance-none border-2 border-gray-200 dark:border-primary rounded w-full py-2 px-4 text-gray-700 dark:text-white leading-tight focus:outline-none focus:bg-white focus:border-lightSecondary"
           value={part}
           onChange={(e) => setPart(e.target.value)}
         >
@@ -30,7 +30,7 @@ export default function FilterUI({
           <option value="back">Back</option>
         </select>
         <select
-          className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          className="bg-gray-200 dark:bg-primary appearance-none border-2 border-gray-200 dark:border-primary rounded w-full py-2 px-4 text-gray-700 dark:text-white leading-tight focus:outline-none focus:bg-white focus:border-lightSecondary"
           value={axieClass}
           onChange={(e) => setAxieClass(e.target.value)}
         >

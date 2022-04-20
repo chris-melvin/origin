@@ -6,6 +6,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 import * as ga from "../lib/google-analytics";
+import { ThemeProvider } from "../components/themeContext";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -21,22 +22,24 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
   return (
-    <DndProvider backend={HTML5Backend}>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+    <ThemeProvider>
+      <DndProvider backend={HTML5Backend}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
-        `}
-      </Script>
-      <Component {...pageProps} />
-    </DndProvider>
+          `}
+        </Script>
+        <Component {...pageProps} />
+      </DndProvider>
+    </ThemeProvider>
   );
 }
 

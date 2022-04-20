@@ -55,7 +55,10 @@ export default function List({ tier, list, setList }) {
         >
           {tierName[tier].name}
         </h2>
-        <button className="text-xl m-1" onClick={() => setFold(!fold)}>
+        <button
+          className="text-xl m-1 dark:text-white"
+          onClick={() => setFold(!fold)}
+        >
           {fold ? <AiOutlinePlusSquare /> : <AiOutlineMinusSquare />}
         </button>
       </span>

@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{html,js,jsx,ts,tsx}",
     "./components/**/*.{html,js,jsx,ts,tsx}",
@@ -11,6 +12,9 @@ module.exports = {
       },
       colors: {
         primary: "#003049",
+        bgPrimary: "#001219",
+        lightPrimary: "#38C2E5",
+        lightSecondary: "#8ecae6",
       },
     },
   },

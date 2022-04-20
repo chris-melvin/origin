@@ -38,10 +38,12 @@ export default function TierList({ allCards }) {
     <>
       <Layout>
         <Head>
-          <title>Axie Origin</title>
+          <title>Axie Origin | Tier List Maker</title>
         </Head>
         <Navbar />
-        <h1 className="text-2xl text-center my-10">Cards Tier List Maker</h1>
+        <h1 className="text-2xl text-center my-10 dark:text-white">
+          Cards Tier List Maker
+        </h1>
         {tier.map((cardTier) => (
           <List
             key={cardTier}
@@ -60,15 +62,12 @@ export default function TierList({ allCards }) {
             setAxieClass={setAxieClass}
           />
         </section>
-        <section
-          className="grid sm:grid-cols-list  items-stretch"
-          ref={dropRef}
-        >
+        <section className="grid grid-cols-list  items-stretch" ref={dropRef}>
           {memoizedFilterFunction
             .filter((e) => e.tier === null || e.tier === "")
             .map((card) => (
-              <div className="mx-auto">
-                <TierCard draggable key={card._id} {...card} />
+              <div key={card._id} className="mx-auto">
+                <TierCard draggable {...card} />
               </div>
             ))}
           <div className="h-40"></div>

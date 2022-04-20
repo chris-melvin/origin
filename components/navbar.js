@@ -1,23 +1,30 @@
 import { useState } from "react";
 import Link from "next/link";
+import Darkmode from "./darkmode";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-primary font-bold">
+    <nav className="bg-lightPrimary dark:bg-primary font-bold">
       <div className="flex z-100 p-6 justify-between">
-        <h1 className="text-xl font-mono text-white  ">Origin</h1>
-        <div className={`hidden md:block space-x-6`}>
-          <NavLinks />
+        <h1 className="text-xl font-mono text-[#1D1D1D] dark:text-white  ">
+          Origin
+        </h1>
+        <div className="flex justify">
+          <Darkmode />
+          <div className={`hidden md:block space-x-6`}>
+            <NavLinks />
+          </div>
+
+          <button
+            type="button"
+            aria-label="Toggle Mobile Menu"
+            onClick={() => setOpen(!open)}
+            className="rounded md:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50"
+          >
+            <MenuAlt4Svg menuOpen={open} />
+          </button>
         </div>
-        <button
-          type="button"
-          aria-label="Toggle Mobile Menu"
-          onClick={() => setOpen(!open)}
-          className="rounded md:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50"
-        >
-          <MenuAlt4Svg menuOpen={open} />
-        </button>
       </div>
 
       {open && (
@@ -50,10 +57,10 @@ const NavLinks = () => {
   return (
     <>
       <Link href="/">
-        <a className="text-white ">Card Explorer</a>
+        <a className="text-[#1D1D1D] dark:text-white ">Card Explorer</a>
       </Link>
       <Link href="/tierlist">
-        <a className="text-white ">Tier List</a>
+        <a className="text-[#1D1D1D] dark:text-white ">Tier List</a>
       </Link>
       {/* <Link href="/guide">
         <a className="text-white ">Guide</a>
