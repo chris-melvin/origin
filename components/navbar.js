@@ -8,21 +8,7 @@ export default function Navbar() {
       <div className="flex z-100 p-6 justify-between">
         <h1 className="text-xl font-mono text-white  ">Origin</h1>
         <div className={`hidden md:block space-x-6`}>
-          <Link href="/">
-            <a className="text-white ">Home</a>
-          </Link>
-          <Link href="/tierlist">
-            <a className="text-white ">Tier List</a>
-          </Link>
-          <Link href="/guide">
-            <a className="text-white ">Guide</a>
-          </Link>
-          <Link href="/potential">
-            <a className="text-white ">Potential Points</a>
-          </Link>
-          <Link href="/about">
-            <a className="text-white ">About</a>
-          </Link>
+          <NavLinks />
         </div>
         <button
           type="button"
@@ -36,21 +22,7 @@ export default function Navbar() {
 
       {open && (
         <div className="p-4 flex flex-col space-y-3 md:hidden">
-          <Link href="/">
-            <a className="text-white ">Home</a>
-          </Link>
-          <Link href="/tierlist">
-            <a className="text-white ">Tier List</a>
-          </Link>
-          <Link href="/guide">
-            <a className="text-white ">Guide</a>
-          </Link>
-          <Link href="/potential">
-            <a className="text-white ">Potential Points</a>
-          </Link>
-          <Link href="/about">
-            <a className="text-white ">About</a>
-          </Link>
+          <NavLinks />
         </div>
       )}
     </nav>
@@ -73,3 +45,25 @@ const MenuAlt4Svg = ({ menuOpen }) => (
     />
   </svg>
 );
+
+const NavLinks = () => {
+  return (
+    <>
+      <Link href="/">
+        <a className="text-white ">Card Explorer</a>
+      </Link>
+      <Link href="/tierlist">
+        <a className="text-white ">Tier List</a>
+      </Link>
+      {/* <Link href="/guide">
+        <a className="text-white ">Guide</a>
+      </Link>
+      <Link href="/potential">
+        <a className="text-white ">Potential Points</a>
+      </Link>
+      <Link href="/about">
+        <a className="text-white ">About</a>
+      </Link> */}
+    </>
+  );
+};

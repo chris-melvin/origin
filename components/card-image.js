@@ -18,5 +18,5 @@ export default function CardImage({
     />
   );
 
-  return <div className="-mx-5 sm:mx-0">{image}</div>;
+  return <div className=" sm:mx-0">{image}</div>;
 }

@@ -9,7 +9,6 @@ import List from "../components/list";
 import { handleCard } from "../components/utils";
 import filterFunction from "../components/filter";
 import FilterUI from "../components/filterui";
-import useStickyState from "../components/useStickyState";
 
 export default function TierList({ allCards }) {
   const tier = ["Stier", "Atier", "Btier", "Ctier", "Dtier", "Etier", "Ftier"];
@@ -35,7 +34,6 @@ export default function TierList({ allCards }) {
     () => filterFunction(filteredCards, part, axieClass),
     [filteredCards, part, axieClass]
   );
-
   return (
     <>
       <Layout>
@@ -43,7 +41,7 @@ export default function TierList({ allCards }) {
           <title>Axie Origin</title>
         </Head>
         <Navbar />
-        <h1 className="text-2xl text-center my-10">Origin Cards Tier List</h1>
+        <h1 className="text-2xl text-center my-10">Cards Tier List Maker</h1>
         {tier.map((cardTier) => (
           <List
             key={cardTier}
@@ -69,8 +67,11 @@ export default function TierList({ allCards }) {
           {memoizedFilterFunction
             .filter((e) => e.tier === null || e.tier === "")
             .map((card) => (
-              <TierCard draggable key={card._id} {...card} />
+              <div className="mx-auto">
+                <TierCard draggable key={card._id} {...card} />
+              </div>
             ))}
+          <div className="h-40"></div>
         </section>
       </Layout>
     </>
